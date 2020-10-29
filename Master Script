@@ -5,17 +5,54 @@
 ##### Abdul, Hardick, Hidalgo & Vo ####
 #######################################
 
+
 #Importing dataset from CSV file uploaded to GSBA-576-Group Project Repository
 #naming the import as df
-df<-read.csv("https://raw.githubusercontent.com/ahardick/GSBA-576-Group-Project/master/StudentsPerformance.csv?token=ARRV3P6KEM6WP47BNACVUO27TII3Y")
+df<-read.csv("https://raw.githubusercontent.com/ahardick/GSBA-576-Group-Project/master/red%20wine%20quality.csv?token=ARRV3PY4E4U3OB4BI4O4QF27TILUA")
 
-###CONDUCTING SOME PRELIMINARY EXPOLORATORY ANALYSIS###
 
-#Checking the dimensions of the dataframe as if it were a matrix object
+#conducting some preliminary exploratory analysis
+
+#checking the dimensions of the dataframe as if it were a matrix object
 dim(df)
 
-#Checking the head() function shows the first six observations
+#checking the head() function shows the first six observations
 head(df)
 
-#Generating the summary statistics
+#generating the summary statistics
 summary(df)  
+
+#Checking the class for each variable
+class(df$fixed.acidity)
+class(df$volatile.acidity)
+class(df$citric.acid)
+class(df$residual.sugar)
+class(df$chlorides)
+class(df$free.sulfur.dioxide)
+class(df$total.sulfur.dioxide)
+class(df$density)
+class(df$pH)
+class(df$sulphates)
+class(df$alcohol)
+class(df$quality)
+
+
+#Creating histogram plots for each of the variables
+hist(df$fixed.acidity)
+hist(df$volatile.acidity)
+hist(df$citric.acid)
+hist(df$residual.sugar)
+hist(df$chlorides)
+hist(df$free.sulfur.dioxide)
+hist(df$total.sulfur.dioxide)
+hist(df$density)
+hist(df$pH)
+hist(df$sulphates)
+hist(df$alcohol)
+hist(df$quality)
+
+#Generating the pairs of scatter plots for all variables
+pairs(df)
+
+#Generating the entire variance-covariance matrix
+cov(df)
