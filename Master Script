@@ -1,4 +1,19 @@
+########GSBA-576-Group-Project#########
+#####Student Perfomance in Exams#######
+###########Group Members: #############
+######Abdul, Hardick, Hidalgo & Vo#####
+
 #Importing dataset from CSV file uploaded to GSBA-576-Group Project Repository
 #naming the import as df
 df<-read.csv("https://raw.githubusercontent.com/ahardick/GSBA-576-Group-Project/master/StudentsPerformance.csv?token=ARRV3P6KEM6WP47BNACVUO27TII3Y")
 
+###CONDUCTING SOME PRELIMINARY EXPOLORATORY ANALYSIS###
+
+#Checking the dimensions of the dataframe as if it were a matrix object
+dim(df)
+
+#Checking the head() function shows the first six observations
+head(df)
+
+#Generating the summary statistics
+summary(df)  
