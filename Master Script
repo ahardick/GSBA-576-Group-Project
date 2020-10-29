@@ -1,1 +1,4 @@
-df<-read.csv("https://raw.githubusercontent.com/ahardick/GSBA-576-Group-Project/master/StudentsPerformance.csv?token=ARRV3P4MPW45T42PUPPZMM27TIIRU")
+#Importing dataset from CSV file uploaded to GSBA-576-Group Project Repository
+#naming the import as df
+df<-read.csv("https://raw.githubusercontent.com/ahardick/GSBA-576-Group-Project/master/StudentsPerformance.csv?token=ARRV3P6KEM6WP47BNACVUO27TII3Y")
+
