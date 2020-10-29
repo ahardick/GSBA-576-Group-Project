@@ -1,7 +1,9 @@
-########GSBA-576-Group-Project#########
-#####Student Perfomance in Exams#######
-###########Group Members: #############
-######Abdul, Hardick, Hidalgo & Vo#####
+#######################################
+######## GSBA 576 Goup Project ########
+##### Sudent Perfomance in Exams ######
+########## Goup Members: ##############
+##### Abdul, Hardick, Hidalgo & Vo ####
+#######################################
 
 #Importing dataset from CSV file uploaded to GSBA-576-Group Project Repository
 #naming the import as df
