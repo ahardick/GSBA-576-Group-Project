@@ -63,7 +63,7 @@ cov(new_df)
 
 
 #############################
-####DATA CLEANING EXAMPLE####
+#######DATA CLEANING ########
 #############################
 
 
@@ -82,13 +82,26 @@ plot(factor(df$Genre))
 plot(factor(df$Year))
 
 #Finding unique Values of all to find any N/A's, looks like Year Has the only NA values
-unique(df$Platform)
-unique(df$Year)
-unique(df$Genre)
-unique(df$Name)
+unique(df3$Platform)
+unique(df3$Year)
+unique(df3$Genre)
+unique(df3$Name)
+unique(df3$Publisher)
 
 
 #Deleting rows that have NA values, saving to a new DF
 df2<-subset(df, Year!='N/A')
 view(df2)
 plot(factor(df2$Year))
+
+df3<-subset(df2, Year==2008)
+plot(factor(df3$Year))
+
+?barplot
+view(df3)
+?hist
+
+plot(factor(df3$Genre))
+# Create a dummy variable for action games. To be used is regression & Classification 
+df3$Action <- ifelse(df3$Genre == "Action", 1, 0)  
+view(df3)
