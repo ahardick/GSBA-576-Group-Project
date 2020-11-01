@@ -36,7 +36,7 @@ class(df$JP_Sales)
 class(df$Other_Sales)
 class(df$Global_Sales)
 
-?data.frame
+# Create a new DF of each of the numeric values
 new_df <- data.frame(df$NA_Sales, df$EU_Sales,df$JP_Sales,df$Other_Sales,df$Global_Sales, head=TRUE)
 names(new_df) &lt;- c("Sales", "EU_Sales", "JP_Sales" , "Other")                      
 head(new_df)                          
@@ -58,3 +58,37 @@ pairs(new_df)
 
 #Generating the entire variance-covariance matrix
 cov(new_df)
+
+
+
+
+#############################
+####DATA CLEANING EXAMPLE####
+#############################
+
+
+
+##CONDUCT SOME EXPLORATORY ANALYSIS##
+View(df)  ##View data in spreadsheet format
+head(df)  ##display first 6 rows of data
+tail(df)  ##display last 6 rows of data
+summary(df)  ##generates summary statistics for all variables
+plot(df$NA_Sales)   ##plot of NA Sales
+hist(df$NA_Sales)  ##generates a histogram of NA Sales
+summary(df$NA_Sales) ##summarizes NA_Sales
+#Plotting Titles Sold  by platform
+plot(factor(df$Genre))
+#Plotting number of ttles sold by by year. Looks like there are some NA Values we can delete
+plot(factor(df$Year))
+
+#Finding unique Values of all to find any N/A's, looks like Year Has the only NA values
+unique(df$Platform)
+unique(df$Year)
+unique(df$Genre)
+unique(df$Name)
+
+
+#Deleting rows that have NA values, saving to a new DF
+df2<-subset(df, Year!='N/A')
+view(df2)
+plot(factor(df2$Year))
